@@ -27,9 +27,24 @@
 }
 
 body {
+	position: relative;
 	background-color: var(--main-background);
 	padding-top: 1.5rem;
 	width: 100vw;
+}
+
+.second-background-color {
+	position: absolute;
+	background-color: hsl(219, 27%, 14%);
+	background-image: url(../images/bg-curvy-mobile.svg);
+	background-position: bottom 0 left 0;
+	background-size: 100% auto;
+	background-repeat: no-repeat;
+	width: 100vw;
+	height: 472px;
+	top: 0;
+	left: 0;
+	z-index: -2;
 }
 
 /* header */
@@ -315,6 +330,10 @@ form.error .error-message {
 	color: var(--Light-Red);
 }
 
+form.hide.error .error-message {
+	display: none;
+}
+
 input:focus {
 	outline: none;
 }
@@ -446,6 +465,15 @@ div.circle {
 }
 
 @media (min-width: 1040px) {
+	.second-background-color {
+		background-image: url(../images/bg-curvy-desktop.svg);
+		background-position: bottom 0 left 0;
+		background-size: 100% auto;
+		height: 83rem;
+		top: 0;
+		left: 0;
+	}
+
 	.content {
 		max-width: 1200px;
 		padding: 0 50px;
@@ -453,6 +481,8 @@ div.circle {
 
 	header {
 		padding: 2.5rem 6rem 0;
+		max-width: 1500px;
+		margin: 0 auto 4rem;
 	}
 
 	.section-1 {
@@ -524,6 +554,7 @@ div.circle {
 		justify-content: space-between;
 		gap: 3rem;
 		padding: 0;
+		margin-bottom: 14rem;
 	}
 
 	.testimonial p {
@@ -538,15 +569,104 @@ div.circle {
 	.quotes {
 		width: 59px;
 		top: -36px;
-		left: -10px;
+		left: -8px;
 	}
 
 	.email-section {
 		max-width: 850px;
-		margin: 0 auto;
+		margin: 0 auto -140px;
+		padding: 2.5rem 5rem;
 	}
 
 	form {
 		display: flex;
+		gap: 2.5rem;
+		justify-content: space-between;
+	}
+
+	.left {
+		width: 500px;
+	}
+
+	input {
+		display: inline;
+		max-width: 100%;
+	}
+
+	.submit {
+		height: 47px;
+		width: 288px;
+	}
+
+	.error-message {
+		margin: 5px 0 0 2rem;
+	}
+
+	.email-section h2 {
+		font-size: 2.7rem;
+	}
+
+	.email-section p {
+		margin-bottom: 2.5rem;
+	}
+
+	footer {
+		padding: 16rem 8.5rem 2rem;
+		padding-right: 7rem;
+	}
+
+	.footer {
+		flex-direction: row;
+	}
+
+	.location p {
+		max-width: 300px;
+	}
+
+	.footer-links {
+		margin-top: 0;
+		display: flex;
+		gap: 5rem;
+	}
+
+	.footer-links ul {
+		width: 80px;
+	}
+
+	div.footer-wrap {
+		display: flex;
+		align-items: flex-start;
+		justify-content: space-between;
+	}
+
+	.social {
+		margin-top: 0;
+		margin-bottom: 0;
+		gap: 1rem;
+	}
+
+	.location {
+		margin-right: 7rem;
+	}
+	.contact .cell,
+	.contact .email {
+		margin-right: 14rem;
+	}
+
+	.location,
+	.contact .cell,
+	.contact .email {
+		padding-right: 0;
+	}
+
+	.social-size,
+	.twitter {
+		width: 15px;
+		height: 15px;
+	}
+
+	.content-footer-wrap {
+		max-width: 1230px;
+		margin: 0 auto;
 	}
 }
