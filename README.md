@@ -47,7 +47,7 @@ Users should be able to:
 
 This challenge tested my position skills. It helped me improve my flex-box, grid and absolute positioning skills for my elements and background element. It was one of the biggest projects I've made so I had to make sure I maintained clean and organized code.
 
-Here is some code that I wrote in order to complete this project
+- In the following javascript sytanx, I passed the input from the form through a function to check if email is valid or not.
 
 ```Javascript
 form.addEventListener('submit', (e) => {
@@ -70,29 +70,6 @@ function checkInput() {
         //added this alert so that it can first clear off any errors left
         setTimeout(alertSuccess, 0);
     }
-}
-```
-
-```CSS
-body {
-	position: relative;
-	background-color: var(--main-background);
-	padding-top: 1.5rem;
-	width: 100vw;
-}
-
-.second-background-color {
-	position: absolute;
-	background-color: hsl(219, 27%, 14%);
-	background-image: url(../images/bg-curvy-mobile.svg);
-	background-position: bottom 0 left 0;
-	background-size: 100% auto;
-	background-repeat: no-repeat;
-	width: 100vw;
-	height: 472px;
-	top: 0;
-	left: 0;
-	z-index: -2;
 }
 ```
 
